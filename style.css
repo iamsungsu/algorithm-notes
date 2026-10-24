@@ -1,0 +1,47 @@
+body {
+    background-color: #111827;
+    color: #CBD5E1;
+}
+
+li {
+    font-family: gulim;
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.box-list {
+    border-right: 1px solid #334155;
+    padding: 15px;
+    width: fit-content;
+    margin-top: 0px;
+    background-color: #0F172A;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 20px;
+    min-height: calc(100vh - 116px);
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.site-credit {
+    position: absolute;
+    right: 24px;
+    top: 85%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    color: #a7bcda;
+}
+
+a {
+    color: #818CF8;
+    text-decoration: none;
+}
