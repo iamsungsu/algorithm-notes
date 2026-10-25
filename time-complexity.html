@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Complexity</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1><a href="index.html">Algorithm notes</a></h1>
+            <p id="today-title"></p>
+            <p id="quote"></p>
+        </div>
+        <script src="script.js"></script>
+
+        <span class="site-credit">Made by Sungsu · 2026</span>
+    </header>
+
+    <section class="note-content">
+    <h2>Big-O Notation</h2>
+
+    <div class="complexity-list">
+        <p><code>O(1)</code> 상수 시간</p>
+        <p><code>O(log n)</code> 로그 시간</p>
+        <p><code>O(n)</code> 선형 시간</p>
+        <p><code>O(n log n)</code> 선형 로그 시간</p>
+        <p><code>O(n²)</code> 이차 시간</p>
+        <p><code>O(2ⁿ)</code> 지수 시간</p>
+    </div>
+
+    <h3>시간 복잡도 최적화</h3>
+
+    <p>
+        O(n²)과 O(2ⁿ)은 입력 데이터가 많아질수록 처리 시간이
+        빠르게 증가한다. 단, O(n²)은 다항 시간이고 O(2ⁿ)은 지수 시간이다.
+        문제의 조건에 따라 더 효율적인 알고리즘을 선택할 필요가 있다.
+    </p>
+
+    <p>
+        <code>O(n²)</code>은 중첩 반복문에서 자주 나타난다.
+        이미 확인한 데이터를 set이나 dict에 저장하면
+        특정 문제에서 불필요한 반복 탐색을 줄일 수 있다.
+    </p>
+
+    <p>
+        <code>O(2ⁿ)</code>은 각 단계에서 두 가지 선택이 반복되는
+        완전 탐색 등에서 나타날 수 있다. 중복 계산이 있다면
+        메모이제이션으로 계산량을 줄일 수 있다.
+    </p>
+
+    <h3>메모이제이션 (Memoization)</h3>
+
+    <p>
+        한 번 계산한 결과를 저장해 두었다가 같은 계산이 필요할 때
+        재사용하는 방법이다. 피보나치 수열을 예로 살펴보자.
+    </p>
+
+    <h4>① 단순 재귀: O(2ⁿ)</h4>
+
+    <pre class="code-block"><code><span class="kw">def</span> <span class="fn">fib</span>(n):
+    <span class="kw">if</span> n &lt;= <span class="num">1</span>:
+        <span class="kw">return</span> n
+
+    <span class="kw">return</span> <span class="fn">fib</span>(n - <span class="num">1</span>) + <span class="fn">fib</span>(n - <span class="num">2</span>)</code></pre>
+
+    <h4>② 메모이제이션 적용: O(n)</h4>
+
+    <pre class="code-block"><code><span class="comment"># 계산 결과를 저장할 딕셔너리</span>
+memo = {}
+
+<span class="kw">def</span> <span class="fn">fib</span>(n):
+    <span class="kw">if</span> n &lt;= <span class="num">1</span>:
+        <span class="kw">return</span> n
+
+    <span class="kw">if</span> n <span class="kw">in</span> memo:
+        <span class="kw">return</span> memo[n]
+
+    memo[n] = <span class="fn">fib</span>(n - <span class="num">1</span>) + <span class="fn">fib</span>(n - <span class="num">2</span>)
+    <span class="kw">return</span> memo[n]</code></pre>
+
+    <p>
+        중복 계산을 제거해 피보나치 수열의 계산량을 줄일 수 있다.
+        이처럼 부분 문제의 결과를 저장해 재사용하는 접근은
+        동적 계획법(Dynamic Programming, DP)의 대표적인 기법이다.
+    </p>
+
+    <h3>이진 탐색 (Binary Search)</h3>
+
+    <p>
+        정렬된 배열에서 중간값과 목표값을 비교해 탐색 범위를
+        매번 절반으로 줄이는 알고리즘이다. 시간 복잡도는 O(log n)이다.
+    </p>
+
+    <pre class="code-block"><code><span class="kw">def</span> <span class="fn">binary_search</span>(arr, target):
+    left = <span class="num">0</span>
+    right = <span class="fn">len</span>(arr) - <span class="num">1</span>
+
+    <span class="kw">while</span> left &lt;= right:
+        <span class="comment"># 중간 인덱스 계산</span>
+        mid = (left + right) // <span class="num">2</span>
+
+        <span class="kw">if</span> arr[mid] == target:
+            <span class="kw">return</span> mid
+        <span class="kw">elif</span> arr[mid] &lt; target:
+            <span class="comment"># 오른쪽 절반 탐색</span>
+            left = mid + <span class="num">1</span>
+        <span class="kw">else</span>:
+            <span class="comment"># 왼쪽 절반 탐색</span>
+            right = mid - <span class="num">1</span>
+
+    <span class="kw">return</span> -<span class="num">1</span></code></pre>
+
+    <h3>알고리즘 최적화를 위한 접근법</h3>
+
+    <ol>
+        <li>
+            <strong>같은 계산을 반복한다면</strong>
+            <p>메모이제이션이나 동적 계획법(DP)을 고려한다.</p>
+        </li>
+        <li>
+            <strong>같은 데이터를 반복 탐색한다면</strong>
+            <p>set, dict, 해시 테이블 등을 활용할 수 있는지 확인한다.</p>
+        </li>
+        <li>
+            <strong>정렬된 데이터에서 값을 찾는다면</strong>
+            <p>이진 탐색을 사용할 수 있는지 확인한다.</p>
+        </li>
+        <li>
+            <strong>중첩 반복문이 있다면</strong>
+            <p>정렬, 해싱, 투 포인터, 슬라이딩 윈도우 등으로 반복을 줄일 수 있는지 살펴본다.</p>
+        </li>
+        <li>
+            <strong>이미 효율적인 표준 기능이 있다면</strong>
+            <p>직접 구현하기 전에 Python의 <code>list.sort()</code> 같은 기능을 활용할 수 있는지 확인한다.</p>
+        </li>
+    </ol>
+
+    <h3>핵심 정리</h3>
+
+    <p>
+        모든 문제에 적용되는 단 하나의 알고리즘은 없다.
+        문제의 입력 크기, 데이터의 특성, 시간 및 공간 제약을 분석해
+        적절한 알고리즘과 자료구조를 선택해야 한다.
+    </p>
+
+    <p>대표적으로 자주 사용하는 알고리즘 기법은 다음과 같다.</p>
+
+    <div class="topic-list">
+        <span>해싱</span>
+        <span>정렬</span>
+        <span>이진 탐색</span>
+        <span>투 포인터</span>
+        <span>슬라이딩 윈도우</span>
+        <span>그리디</span>
+        <span>분할 정복</span>
+        <span>동적 계획법</span>
+    </div>
+</section>
+</body>
+</html>

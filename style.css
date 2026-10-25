@@ -1,10 +1,144 @@
+/* 전체 페이지 */
 body {
-    background-color: #111827;
+    margin: 0;
+    background-color: #0F172A;
     color: #CBD5E1;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
 }
 
+/* 공통 링크 */
+a {
+    color: #CBD5E1;
+    text-decoration: none;
+}
+
+/* 상단 제목 영역 */
+.header {
+    position: relative;
+    text-align: center;
+    padding: 18px 24px;
+    background-color: #111827;
+    border-bottom: 1px solid #334155;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.header h1 a {
+    color: #F1F5F9;
+}
+
+.header h1 a:hover {
+    color: #A5B4FC;
+}
+
+/* 오늘의 명언 */
+#today-title,
+#quote {
+    display: inline;
+    margin: 0;
+    font-size: 14px;
+}
+
+#today-title {
+    color: #94A3B8;
+}
+
+#today-title::after {
+    content: " · ";
+    color: #64748B;
+}
+
+/* 제작자 표시 */
+.site-credit {
+    position: absolute;
+    right: 24px;
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #64748B;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 40px 0 70px;
+    text-align: center;
+}
+
+/* 본문 제목 */
+.main-title {
+    margin: 10px 0 24px;
+    color: #F1F5F9;
+    font-size: 24px;
+}
+
+/* 본문 설명 */
+.main-description {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #94A3B8;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* 버튼 3개 배치 */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: min(900px, 100%);
+    margin: 60px auto 0;
+}
+
+/* 카드형 버튼 */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    padding: 18px 12px;
+    box-sizing: border-box;
+
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 14px;
+
+    color: #E2E8F0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    transition: background-color 0.2s,
+                border-color 0.2s,
+                transform 0.2s;
+}
+
+/* 마우스를 올렸을 때 */
+.button:hover {
+    background-color: #29365A;
+    border-color: #818CF8;
+    transform: translateY(-4px);
+}
+
+/* 버튼을 눌렀을 때 */
+.button:active {
+    transform: translateY(-1px);
+}
+
+/* 키보드로 링크를 선택했을 때 */
+.button:focus-visible {
+    outline: 2px solid #A5B4FC;
+    outline-offset: 4px;
+}
+
+/* 기존 다른 페이지의 사이드바 */
 li {
-    font-family: gulim;
     font-size: 19px;
     margin-top: 15px;
 }
@@ -13,10 +147,9 @@ li {
     border-right: 1px solid #334155;
     padding: 15px;
     width: fit-content;
-    margin-top: 0px;
+    margin-top: 0;
     background-color: #0F172A;
 }
-
 
 .container {
     display: grid;
@@ -25,23 +158,352 @@ li {
     min-height: calc(100vh - 116px);
 }
 
-.header {
-    position: relative;
+/* 모바일 화면 */
+@media (max-width: 650px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .site-credit {
+        position: static;
+        transform: none;
+        margin-top: 6px;
+    }
+
+    .main-content {
+        width: calc(100% - 32px);
+        padding: 30px 0 50px;
+    }
+
+    .main-title {
+        font-size: 21px;
+    }
+
+    .main-description {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .button-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 35px;
+    }
+
+    .button {
+        min-height: 65px;
+        font-size: 17px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 알고리즘 기초 페이지 전용 디자인 */
+
+.algorithm-basic-page {
+    min-height: 100vh;
+}
+
+/* 상단 헤더 */
+.algorithm-basic-page .header {
+    padding: 14px 24px;
+}
+
+.algorithm-basic-page .header h1 {
+    margin: 0 0 4px;
+    font-size: 27px;
+}
+
+.algorithm-basic-page .site-credit {
+    top: 50%;
+}
+
+/* 메인 영역 */
+.algorithm-basic-page .basic-main {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 34px 0 28px;
+    box-sizing: border-box;
+}
+
+/* 페이지 소개 */
+.algorithm-basic-page .basic-intro {
     text-align: center;
-    border-bottom: 1px solid #334155;
+    margin-bottom: 28px;
 }
 
-.site-credit {
-    position: absolute;
-    right: 24px;
-    top: 85%;
-    transform: translateY(-50%);
-
-    font-size: 16px;
-    color: #a7bcda;
-}
-
-a {
+.algorithm-basic-page .basic-label {
+    margin: 0 0 6px;
     color: #818CF8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.algorithm-basic-page .basic-intro h2 {
+    margin: 0;
+    color: #F1F5F9;
+    font-size: 28px;
+}
+
+.algorithm-basic-page .basic-description {
+    margin: 8px 0 0;
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+/* 개념 카드 배치 */
+.algorithm-basic-page .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* 각 카드 */
+.algorithm-basic-page .topic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 175px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: #172238;
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    color: #CBD5E1;
     text-decoration: none;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+/* 실제 링크가 있는 카드에만 호버 효과 */
+.algorithm-basic-page a.topic-card:hover {
+    background-color: #202E49;
+    border-color: #818CF8;
+    transform: translateY(-3px);
+}
+
+.algorithm-basic-page a.topic-card:focus-visible {
+    outline: 2px solid #A5B4FC;
+    outline-offset: 3px;
+}
+
+/* 카드 상단 영문 분류 */
+.algorithm-basic-page .topic-number {
+    color: #818CF8;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 카드 제목 */
+.algorithm-basic-page .topic-card h3 {
+    margin: 12px 0 6px;
+    color: #F1F5F9;
+    font-size: 18px;
+}
+
+/* 카드 설명 */
+.algorithm-basic-page .topic-card p {
+    margin: 0;
+    color: #94A3B8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* 카드 하단 링크 */
+.algorithm-basic-page .topic-action {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #A5B4FC;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 아직 정리하지 않은 개념 */
+.algorithm-basic-page .topic-status {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+/* 페이지 하단 문구 */
+.algorithm-basic-page .basic-footer {
+    margin-top: 24px;
+    text-align: center;
+    color: #475569;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+/* 태블릿: 두 열 */
+@media (max-width: 800px) {
+    .algorithm-basic-page .topic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 모바일: 한 열 */
+@media (max-width: 550px) {
+    .algorithm-basic-page .basic-main {
+        width: calc(100% - 28px);
+        padding-top: 24px;
+    }
+
+    .algorithm-basic-page .basic-intro h2 {
+        font-size: 24px;
+    }
+
+    .algorithm-basic-page .topic-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .algorithm-basic-page .topic-card {
+        min-height: 150px;
+        padding: 18px;
+    }
+
+    .algorithm-basic-page .header {
+        padding: 14px 12px;
+    }
+
+    .algorithm-basic-page .header h1 {
+        font-size: 23px;
+    }
+
+    .algorithm-basic-page .site-credit {
+        position: static;
+        display: block;
+        transform: none;
+        margin-top: 5px;
+    }
+}
+
+/* 여기부터 학습 메모 파일에 적용되는 CSS */
+.note-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 24px;
+    color: #CBD5E1;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.note-content h2 {
+    color: #E2E8F0;
+    font-size: 28px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 12px;
+}
+
+.note-content h3 {
+    color: #A5B4FC;
+    margin-top: 36px;
+}
+
+.note-content h4 {
+    color: #E2E8F0;
+    margin-top: 24px;
+}
+
+.note-content p {
+    margin: 14px 0;
+}
+
+.complexity-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.complexity-list p {
+    margin: 0;
+    padding: 12px;
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
+.note-content p code {
+    color: #A5B4FC;
+    background-color: #1E293B;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* 코드 블록 */
+.code-block {
+    background-color: #0B1120;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.code-block code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    color: #E2E8F0;
+    white-space: pre;
+}
+
+/* 코드 문법별 색상 */
+.code-block .kw {
+    color: #C4B5FD;
+}
+
+.code-block .fn {
+    color: #7DD3FC;
+}
+
+.code-block .num {
+    color: #FDBA74;
+}
+
+.code-block .comment {
+    color: #94A3B8;
+    font-style: italic;
+}
+
+/* 최적화 접근법 */
+.note-content li {
+    padding-left: 6px;
+    margin-bottom: 18px;
+}
+
+.note-content li p {
+    margin: 4px 0;
+}
+
+/* 알고리즘 기법 태그 */
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.topic-list span {
+    background-color: #1E293B;
+    border: 1px solid #475569;
+    color: #A5B4FC;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
 }
