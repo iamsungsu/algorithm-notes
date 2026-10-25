@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>algorithm-data-structure-notes</title>
+    <title>Algorithm notes</title>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+
+<body class="home-page">
 
     <header class="header">
         <div>
@@ -14,35 +15,223 @@
             <p id="today-title"></p>
             <p id="quote"></p>
         </div>
-        <script src="script.js"></script>
 
         <span class="site-credit">Made by Sungsu · 2026</span>
     </header>
 
     <main class="main-content">
-        <h2 class="main-title">왜 알고리즘과 자료구조를 공부해야 할까?</h2>
 
-        <p class="main-description">
-            문법은 누구나 배워서 다룰 수 있지만, 복잡한 문제를 논리적으로 나누고
-            최적의 도구를 선택하는 일은 별개의 영역입니다.
-            제한된 자원과 시간 속에서 성능을 최적화하고,
-            코딩 테스트를 통과하기 위해서는 알고리즘과 자료구조가 필요합니다.
-            눈앞의 에러를 고치는 단계를 넘어,
-            시스템 전체를 설계할 수 있는 개발자의 역량을 길러 봅시다.
-        </p>
+        <section class="home-intro">
+            <h2 class="main-title">
+                알고리즘과 자료구조는 왜 공부해야 할까?
+            </h2>
 
-        <div class="button-container">
-            <a href="algorithm_basic.html" class="button"
-            title="알고리즘 기초 개념 공부하기">1. 알고리즘 기초</a>
+            <p class="main-description">
+                프로그래밍은 단순히 문법을 익히는 것에서 끝나지 않습니다<br>
+                복잡한 문제를 효율적으로 해결하기 위해서는 알고리즘과 자료구조를 이해해야 하며,<br>
+                그 원리를 깊이 있게 파악하기 위해서는 수학적 사고력도 필요합니다
+                <br>
+                단순히 코드를 작성하는 것을 넘어, 기술의 원리를 이해하고 스스로 문제를 해결하는 멋진 개발자가 되어봅시다
+            </p>
+        </section>
 
-            <a href="data_structure.html" class="button"
-            title="자료구조 개념 공부하기">2. 자료구조</a>
+        <!-- 알고리즘 & 자료구조 -->
+        <section class="home-section">
+            <div class="section-heading">
+                <h2>알고리즘 & 자료구조</h2>
+                <p>핵심 개념을 익히고 문제 해결에 적용합니다.</p>
+            </div>
 
-            <a href="advanced_algorithm.html" class="button"
-            title="고급 알고리즘 공부하기">3. 알고리즘 심화</a>
-        </div>
+            <div class="button-container">
+
+                <a href="algorithm_basic.html" class="button">
+                    <span class="card-category">개념 학습</span>
+                    <strong>알고리즘 기초</strong>
+                    <span class="card-description">
+                        시간 복잡도, 재귀, 정렬과 탐색 등
+                        알고리즘의 기본 원리를 공부합니다.
+                    </span>
+                    <span class="card-action">내용 보기 →</span>
+                </a>
+
+                <a href="data_structure.html" class="button">
+                    <span class="card-category">개념 학습</span>
+                    <strong>자료구조</strong>
+                    <span class="card-description">
+                        배열, 스택, 큐, 해시 등 데이터를
+                        효율적으로 다루는 방법을 공부합니다.
+                    </span>
+                    <span class="card-action">내용 보기 →</span>
+                </a>
+
+                <a href="advanced_algorithm.html" class="button">
+                    <span class="card-category">개념 학습</span>
+                    <strong>알고리즘 심화</strong>
+                    <span class="card-description">
+                        그래프 탐색, 그리디, 동적 계획법 등
+                        다양한 문제 해결 기법을 공부합니다.
+                    </span>
+                    <span class="card-action">내용 보기 →</span>
+                </a>
+
+                <article class="button card-disabled">
+                    <span class="card-category">문제 풀이</span>
+                    <strong>알고리즘 문제 실습</strong>
+                    <span class="card-description">
+                        공부한 알고리즘을 코딩 테스트 문제에 적용합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">문제 풀이</span>
+                    <strong>자료구조 문제 실습</strong>
+                    <span class="card-description">
+                        상황에 적합한 자료구조를 선택하고 활용합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">응용 연습</span>
+                    <strong>응용 문제 실습</strong>
+                    <span class="card-description">
+                        여러 개념을 조합하여 문제를 해결합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 기초 수학 -->
+        <section class="home-section">
+            <div class="section-heading">
+                <h2>기초 수학</h2>
+                <p>알고리즘과 프로그래밍을 이해하기 위한 수학적 기초입니다.</p>
+            </div>
+
+            <div class="button-container">
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>기초 수학</strong>
+                    <span class="card-description">
+                        방정식, 함수, 지수와 로그, 수열 등
+                        기본적인 수학 개념을 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>이산수학</strong>
+                    <span class="card-description">
+                        논리, 집합, 경우의 수, 점화식 등
+                        컴퓨터 과학과 관련된 수학을 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>정수론</strong>
+                    <span class="card-description">
+                        소수, 약수, 최대공약수, 나머지 연산 등을 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">문제 풀이</span>
+                    <strong>기초 수학 문제</strong>
+                    <span class="card-description">
+                        기초 개념을 활용하는 수학 문제를 풀이합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">문제 풀이</span>
+                    <strong>이산수학 문제</strong>
+                    <span class="card-description">
+                        논리와 조합론을 활용하는 문제를 풀이합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">문제 풀이</span>
+                    <strong>정수론 문제</strong>
+                    <span class="card-description">
+                        정수론의 개념을 실제 문제에 적용합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 머신러닝 수학 -->
+        <section class="home-section">
+            <div class="section-heading">
+                <h2>머신러닝 수학</h2>
+                <p>머신러닝 모델의 학습 원리와 데이터 연산을 이해합니다.</p>
+            </div>
+
+            <div class="button-container">
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>선형대수</strong>
+                    <span class="card-description">
+                        벡터, 행렬, 내적과 선형변환을 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>미적분</strong>
+                    <span class="card-description">
+                        미분, 편미분, 연쇄법칙과 기울기를 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>확률과 통계</strong>
+                    <span class="card-description">
+                        확률분포, 기댓값, 분산과 베이즈 정리를 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>최적화</strong>
+                    <span class="card-description">
+                        손실 함수와 경사하강법 등 모델 학습 원리를 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+                <article class="button card-disabled">
+                    <span class="card-category">개념 학습</span>
+                    <strong>다변수 함수</strong>
+                    <span class="card-description">
+                        여러 변수를 가지는 함수와 수치 계산을 공부합니다.
+                    </span>
+                    <span class="card-status">페이지 준비 중</span>
+                </article>
+
+            </div>
+        </section>
+
     </main>
-    
-    
+
+    <script src="script.js"></script>
+
 </body>
 </html>
