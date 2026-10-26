@@ -1,0 +1,212 @@
+
+
+
+
+/* 홈페이지 고유 스타일 */
+.home-page .home-section {
+    margin-top: 40px;
+}
+
+/* =====================================
+   홈페이지 전용 스타일
+   ===================================== */
+
+/* 홈페이지 상단 */
+
+.home-page .header {
+    padding: 16px 24px;
+}
+
+.home-page .header h1 {
+    margin-bottom: 4px;
+}
+
+.home-page .site-credit {
+    top: 50%;
+}
+
+
+/* 홈페이지 소개 */
+
+.home-page .home-intro {
+    padding: 8px 0 34px;
+}
+
+.home-page .main-title {
+    margin: 8px 0 14px;
+    font-size: 28px;
+}
+
+.home-page .main-description {
+    max-width: 760px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* 각 카테고리 영역 */
+
+
+.home-page .section-heading {
+    width: min(900px, 100%);
+    margin: 0 auto 16px;
+    text-align: left;
+}
+
+.home-page .section-heading h2 {
+    margin: 0;
+    color: #E2E8F0;
+    font-size: 21px;
+}
+
+.home-page .section-heading p {
+    margin: 4px 0 0;
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+
+/* 카드 배치 */
+
+.home-page .button-container {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+/* 홈페이지 카드 */
+
+.home-page .button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-width: 0;
+    min-height: 172px;
+    margin-top: 0;
+    padding: 18px;
+    box-sizing: border-box;
+
+    background-color: #172238;
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    color: #CBD5E1;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 카드 제목 */
+
+.home-page .button strong {
+    margin-top: 8px;
+    color: #E2E8F0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* 카드 설명 */
+
+.home-page .card-description {
+    display: block;
+    margin-top: 13px;
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+
+/* 카드 하단의 링크 */
+
+.home-page .card-action {
+    display: block;
+    margin-top: auto;
+    padding-top: 16px;
+    color: #A5B4FC;
+    font-size: 12px;
+}
+
+
+/* 마우스를 올린 카드 */
+
+.home-page a.button:hover {
+    background-color: #1E293B;
+    border-color: #6475C7;
+    transform: translateY(-2px);
+}
+
+
+/* 아직 준비되지 않은 카드 */
+
+.home-page .card-disabled {
+    cursor: default;
+}
+
+.home-page .card-disabled:hover {
+    background-color: #172238;
+    border-color: #334155;
+    transform: none;
+}
+
+.home-page .card-status {
+    display: block;
+    margin-top: auto;
+    padding-top: 16px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+
+/* 홈페이지 반응형 */
+
+@media (max-width: 800px) {
+    .home-page .button-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .home-page .header {
+        padding: 16px 20px;
+    }
+
+    .home-page .site-credit {
+        position: static;
+        display: block;
+        margin-top: 5px;
+        transform: none;
+    }
+
+    .home-page .main-title {
+        font-size: 23px;
+    }
+
+    .home-page .main-description {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .home-page .home-section {
+        margin-top: 34px;
+    }
+
+    .home-page .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .home-page .button-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .home-page .button {
+        min-height: 145px;
+        padding: 16px;
+    }
+}

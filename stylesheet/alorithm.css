@@ -1,0 +1,295 @@
+/* 기초 알고리즘 페이지 전용 */
+
+.algorithm-basic-page {
+    min-height: 100vh;
+}
+
+.algorithm-basic-page .header {
+    padding: 14px 24px;
+}
+
+.algorithm-basic-page .header h1 {
+    margin: 0 0 4px;
+    font-size: 27px;
+}
+
+.algorithm-basic-page .site-credit {
+    top: 50%;
+}
+
+.algorithm-basic-page .basic-main {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 34px 0 28px;
+    box-sizing: border-box;
+}
+
+.algorithm-basic-page .basic-intro {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.algorithm-basic-page .basic-label {
+    margin: 0 0 6px;
+    color: #818CF8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.algorithm-basic-page .basic-intro h2 {
+    margin: 0;
+    color: #F1F5F9;
+    font-size: 28px;
+}
+
+.algorithm-basic-page .basic-description {
+    margin: 8px 0 0;
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.algorithm-basic-page .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.algorithm-basic-page .topic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 175px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: #172238;
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    color: #CBD5E1;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.algorithm-basic-page a.topic-card:hover {
+    background-color: #202E49;
+    border-color: #818CF8;
+    transform: translateY(-3px);
+}
+
+.algorithm-basic-page a.topic-card:focus-visible {
+    outline: 2px solid #A5B4FC;
+    outline-offset: 3px;
+}
+
+.algorithm-basic-page .topic-number {
+    color: #818CF8;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.algorithm-basic-page .topic-card h3 {
+    margin: 12px 0 6px;
+    color: #F1F5F9;
+    font-size: 18px;
+}
+
+.algorithm-basic-page .topic-card p {
+    margin: 0;
+    color: #94A3B8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.algorithm-basic-page .topic-action {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #A5B4FC;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.algorithm-basic-page .topic-status {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+.algorithm-basic-page .basic-footer {
+    margin-top: 24px;
+    text-align: center;
+    color: #475569;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+@media (max-width: 800px) {
+    .algorithm-basic-page .topic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .algorithm-basic-page .basic-main {
+        width: calc(100% - 28px);
+        padding-top: 24px;
+    }
+
+    .algorithm-basic-page .basic-intro h2 {
+        font-size: 24px;
+    }
+
+    .algorithm-basic-page .topic-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .algorithm-basic-page .topic-card {
+        min-height: 150px;
+        padding: 18px;
+    }
+
+    .algorithm-basic-page .header {
+        padding: 14px 12px;
+    }
+
+    .algorithm-basic-page .header h1 {
+        font-size: 23px;
+    }
+
+    .algorithm-basic-page .site-credit {
+        position: static;
+        display: block;
+        transform: none;
+        margin-top: 5px;
+    }
+}
+
+/* 학습 메모 페이지 전용 */
+
+.note-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 24px;
+    color: #CBD5E1;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.note-content h2 {
+    color: #E2E8F0;
+    font-size: 28px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 12px;
+}
+
+.note-content h3 {
+    color: #A5B4FC;
+    margin-top: 36px;
+}
+
+.note-content h4 {
+    color: #E2E8F0;
+    margin-top: 24px;
+}
+
+.note-content p {
+    margin: 14px 0;
+}
+
+.complexity-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.complexity-list p {
+    margin: 0;
+    padding: 12px;
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
+.note-content p code {
+    color: #A5B4FC;
+    background-color: #1E293B;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+
+/* 코드 블록 */
+
+.code-block {
+    background-color: #0B1120;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.code-block code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    color: #E2E8F0;
+    white-space: pre;
+}
+
+.code-block .kw {
+    color: #C4B5FD;
+}
+
+.code-block .fn {
+    color: #7DD3FC;
+}
+
+.code-block .num {
+    color: #FDBA74;
+}
+
+.code-block .comment {
+    color: #94A3B8;
+    font-style: italic;
+}
+
+
+/* 학습 메모의 목록 */
+
+.note-content li {
+    padding-left: 6px;
+    margin-bottom: 18px;
+}
+
+.note-content li p {
+    margin: 4px 0;
+}
+
+
+/* 알고리즘 기법 태그 */
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.topic-list span {
+    background-color: #1E293B;
+    border: 1px solid #475569;
+    color: #A5B4FC;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
