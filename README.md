@@ -2,14 +2,14 @@
 
 # Algorithm Notes
 
-알고리즘과 자료구조의 핵심 개념부터 동작 원리까지 체계적으로 학습할 수 있는 웹사이트입니다.
-
-[日本語で読む](./READEME_jp.md)
-
 <br>
 
 **Website:** [Visit Website](https://kim-sungsu05.github.io/algorithm-notes/)  
 **Status:** Ongoing
+
+<br>
+
+[日本語で読む](./READEME_jp.md)
 
 <br>
 
@@ -35,6 +35,8 @@
   <sub>Overview · Topic Navigation · Learning Categories</sub>
 </p>
 
+<br>
+
 <p align="center">
   <img src="screenshots/home-page.png" width="85%" alt="Algorithm Notes Main Page">
 </p>
@@ -46,6 +48,8 @@
 <p align="center">
   <sub>Concepts · Algorithm Analysis · Code Examples</sub>
 </p>
+
+<br>
 
 
 <p align="center">
