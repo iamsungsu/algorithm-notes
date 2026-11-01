@@ -4,7 +4,7 @@
 
 <br>
 
-**Website:** [Visit Website](https://kim-sungsu05.github.io/algorithm-notes/)  
+**Website:** [Visit Website](https://iamsungsu.github.io/algorithm-notes/)  
 **Status:** Ongoing
 
 <br>
