@@ -2,13 +2,11 @@
 
 # Algorithm Notes
 
-アルゴリズムとデータ構造の基本概念から動作原理まで、体系的に学習できるWebサイトです。
+<br>
 
 [한국어로 보기](./README.md)
 
-<br>
-
-**Website:** [Visit Website](https://kim-sungsu05.github.io/algorithm-notes/)  
+**Website:** [Visit Website](https://iamsungsu.github.io/algorithm-notes/)  
 **Status:** Ongoing
 
 <br>
